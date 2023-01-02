@@ -1,11 +1,10 @@
 import pygame
-# Backgrounds
+
 road = pygame.image.load("pictures/road.png")
 road = pygame.transform.scale(road,(400,800))
 grass = pygame.image.load("pictures/grass.jpg")
 grass = pygame.transform.scale(grass,(275,800))
-#Player sprite
-bike = pygame.image.load("pictures/bike1.png")
+#Player spritebike = pygame.image.load("pictures/bike1.png")
 bike = pygame.transform.scale(bike,(70,140))
 # Obstacles sprites
 car1 = pygame.image.load("pictures/car1.png")
