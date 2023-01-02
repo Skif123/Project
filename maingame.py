@@ -71,3 +71,31 @@ def start():
             pygame.quit()
             quit()
 
+
+# Function to display game over screen.
+def gameover():
+    while (1):
+        screen.blit(bgimage, (0, 0))
+        screen.blit(roadrage, (0, 150))
+        label = font3.render("GAME OVER", 1, (255, 255, 0))
+        screen.blit(label, (250, 380))
+        label2 = font4.render("PLAY AGAIN ???", 1, (255, 165, 0))
+        screen.blit(label2, (230, 450))
+        buttons(250, 500, (0, 150, 0), "YES", 100, 50)
+        buttons(420, 500, (150, 0, 0), "QUIT", 100, 50)
+        mouse = pygame.mouse.get_pos()
+        click = pygame.mouse.get_pressed()
+        if (250 < mouse[0] < 350 and 500 < mouse[1] < 550):
+            buttons(250, 500, (220, 160, 220), "YES", 100, 50)
+            if click[0] == 1:
+                return 1
+        if (420 < mouse[0] < 520 and 500 < mouse[1] < 550):
+            buttons(420, 500, (220, 160, 220), "QUIT", 100, 50)
+            if click[0] == 1:
+                pygame.quit()
+                quit()
+        pygame.display.update()
+        command = pygame.event.poll()
+        if command.type == pygame.QUIT:
+            pygame.quit()
+            quit()
